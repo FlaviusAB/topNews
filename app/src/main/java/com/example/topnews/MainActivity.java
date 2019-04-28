@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 if(response.isSuccessful())
                 {
                     List<Article> art = response.body().getArticles();
+                    mArticlesAdapter = new ArticlesAdapter(art);
                 }
                 else
                 {
